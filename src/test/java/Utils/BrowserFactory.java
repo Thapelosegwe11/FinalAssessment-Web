@@ -53,9 +53,4 @@ public class BrowserFactory {
         return driver;
     }
 
-    @Test
-    public void test(){
-        launchBrowser("chrome","https://ndosisimplifiedautomation.vercel.app/");
-    }
-
 }
