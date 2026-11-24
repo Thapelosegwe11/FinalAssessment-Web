@@ -1,6 +1,5 @@
 package TestCases;
 
-import Pages.LandingPage;
 import Utils.Base;
 import org.testng.annotations.Test;
 
@@ -9,13 +8,14 @@ public class UserRegistrationTests extends Base {
 
 
     @Test
-    public void verifyPageElements(){
-        landingPage.verifyLandingPage();
-
+    public void NavigateToUserRegistration(){
+        homePage.verifyLandingPage();
+        homePage.clickMainLoginButton();
     }
 
     @Test
-    public void clickLoginButtonTest(){
-        landingPage.clickMainLoginButton();
+    public void clickSignUpButtonTest(){
+        loginFormPage.clickSignUp();
     }
+
 }

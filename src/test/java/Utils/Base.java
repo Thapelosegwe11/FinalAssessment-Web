@@ -1,6 +1,7 @@
 package Utils;
 
-import Pages.LandingPage;
+import Pages.HomePage;
+import Pages.LoginFormPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
@@ -10,27 +11,12 @@ import static Utils.BrowserFactory.driver;
 
 public class Base {
 
-    public static final BrowserFactory factory = new BrowserFactory();
+    static final BrowserFactory factory = new BrowserFactory();
 
-    public WebDriver driver;
-    public LandingPage landingPage;
-
-    @BeforeClass
-    public void setup(){
-
-        driver = factory.launchBrowser("chrome","https://ndosisimplifiedautomation.vercel.app/");
-
-        landingPage = PageFactory.initElements(driver, LandingPage.class);
+    final WebDriver driver = factory.launchBrowser("chrome","https://ndosisimplifiedautomation.vercel.app/");
 
 
-    }
-
-    @AfterClass
-    public void teardown(){
-
-        if (driver != null){
-            driver.quit();
-        }
-    }
+    public  HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+    public  LoginFormPage loginFormPage = PageFactory.initElements(driver, LoginFormPage.class);
 
 }

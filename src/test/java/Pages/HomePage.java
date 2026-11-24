@@ -4,18 +4,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class LandingPage {
+public class HomePage {
 
     //1. Call driver as a global to use in class.
     WebDriver driver;
     WebDriverWait wait;
 
     //2. Constructor method
-    public LandingPage(WebDriver driver){
+    public HomePage(WebDriver driver){
         this.driver = driver;
         this.wait = new WebDriverWait(driver,Duration.ofSeconds(10));
     }

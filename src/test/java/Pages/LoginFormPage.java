@@ -24,6 +24,8 @@ public class LoginFormPage {
 
     By SignUpButton = By.id("signup-toggle");
 
+
+
     //4.Descriptive method/user action.
 
     public void clickSignUp(){
